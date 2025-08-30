@@ -1,84 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Navbar with Tailwind CSS</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WTI Cabs - Online Cab Booking</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <nav class="bg-indigo-600">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
-        <div class="flex items-center">
-          <!-- Logo -->
-          <a href="#" class="flex-shrink-0 text-white font-bold text-xl">
-            WorldTripLink
-          </a>
-        </div>
-        <div class="hidden md:block">
-          <div class="ml-10 flex items-baseline space-x-4">
-            <a href="#" class="text-indigo-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-              Home
-            </a>
-            <a href="#" class="text-indigo-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-              Enquiries
-            </a>
-            <a href="#" class="text-indigo-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-              Services
-            </a>
-            <a href="#" class="text-indigo-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-              Contact
-            </a>
-          </div>
-        </div>
-        <!-- Mobile menu button -->
-        <div class="-mr-2 flex md:hidden">
-          <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-indigo-200 hover:text-white hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
-            <span class="sr-only">Open main menu</span>
-            <!-- Menu Icon -->
-            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-            </svg>
-            <!-- Close Icon -->
-            <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" id="mobile-menu-close-icon">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/wti-logo.png" alt="WTI Cabs">
+            </div>
+            <div class="nav-items">
+                <div class="service-type">
+                    <button class="active">Cabs</button>
+                    <button>Self Drive</button>
+                </div>
+                <div class="right-nav">
+                    <div class="dropdown">
+                        <button>Corporate Mobility Solution</button>
+                    </div>
+                    <div class="dropdown">
+                        <button>FleetPro</button>
+                    </div>
+                    <div class="dropdown">
+                        <select class="currency-select">
+                            <option value="INR">INR</option>
+                        </select>
+                    </div>
+                    <button class="login-btn">Login or Create Account</button>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-    <!-- Mobile menu, hidden by default -->
-    <div class="md:hidden hidden" id="mobile-menu">
-      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-        <a href="#" class="text-indigo-200 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-          Home
-        </a>
-        <a href="#" class="text-indigo-200 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-          Enquiries
-        </a>
-        <a href="#" class="text-indigo-200 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-          Services
-        </a>
-        <a href="#" class="text-indigo-200 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-          Contact
-        </a>
-      </div>
-    </div>
-  </nav>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Experience Hassle-Free Online Cab Booking in DUBAI</h1>
+                <h2>Fast, Easy & Reliable - Book Your Cab Now</h2>
+                
+                <div class="booking-container">
+                    <div class="booking-tabs">
+                        <button class="active">Airport</button>
+                        <button>Outstation One-Way</button>
+                        <button>Outstation Round-Trip</button>
+                        <button>Hourly Rental</button>
+                    </div>
+                    
+                    <div class="booking-form">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <label>From</label>
+                                <input type="text" placeholder="From">
+                            </div>
+                            <div class="swap-icon">⇄</div>
+                            <div class="input-group">
+                                <label>To</label>
+                                <input type="text" placeholder="To">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="input-group">
+                                <label>Departure</label>
+                                <input type="text" value="30 Aug 2025">
+                            </div>
+                            <div class="input-group">
+                                <label>Pickup-Time</label>
+                                <input type="text" value="14:00">
+                            </div>
+                        </div>
+                        
+                        <button class="search-btn">Go</button>
+                    </div>
+                </div>
 
-  <script>
-    const btn = document.getElementById('mobile-menu-button');
-    const menu = document.getElementById('mobile-menu');
-    const closeIcon = document.getElementById('mobile-menu-close-icon');
-    const openIcon = btn.querySelector('svg.block');
+                <div class="features">
+                    <div class="feature">
+                        <span class="icon">✓</span>
+                        Hassle-Free bookings
+                    </div>
+                    <div class="feature">
+                        <span class="icon">✓</span>
+                        Best Cab Offers
+                    </div>
+                    <div class="feature">
+                        <span class="icon">✓</span>
+                        24x7 Customer Support
+                    </div>
+                    <div class="feature">
+                        <span class="icon">✓</span>
+                        Free Cancellation
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    btn.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
-      openIcon.classList.toggle('hidden');
-      closeIcon.classList.toggle('hidden');
-    });
-  </script>
+        <section class="destinations">
+            <div class="destination-cards">
+                <div class="destination-card">
+                    <img src="images/kolkata.jpg" alt="Kolkata">
+                    <h3>Kolkata</h3>
+                    <p>To: <a href="#">Ranchi</a> • <a href="#">Digha</a> • <a href="#">Puri</a></p>
+                </div>
+                <div class="destination-card">
+                    <img src="images/ahmedabad.jpg" alt="Ahmedabad">
+                    <h3>Ahmedabad</h3>
+                    <p>To: <a href="#">Surat</a> • <a href="#">Mumbai</a> • <a href="#">Rajkot</a></p>
+                </div>
+                <div class="destination-card">
+                    <img src="images/pune.jpg" alt="Pune">
+                    <h3>Pune</h3>
+                    <p>To: <a href="#">Mumbai</a> • <a href="#">Goa</a> • <a href="#">Hampi</a></p>
+                </div>
+                <!-- More destination cards -->
+            </div>
+        </section>
+
+        <section class="blog-section">
+            <h2>Driving Inspiration: Stories from the Road</h2>
+            <div class="blog-cards">
+                <div class="blog-card">
+                    <img src="images/business-mobility.jpg" alt="Business Mobility">
+                    <h3>How Monthly Car Rentals Support Business Mobility Solutions</h3>
+                    <p>Discover how monthly car rentals for businesses enhance corporate mobility solutions, offering flexibility, cost savings, and reliable travel options</p>
+                </div>
+                <!-- More blog cards -->
+            </div>
+        </section>
+    </main>
 </body>
 </html>
